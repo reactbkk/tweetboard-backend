@@ -1,6 +1,8 @@
 const Twitter = require('twitter')
 const admin = require('firebase-admin')
-const serviceAccount = require('./private-key')
+const serviceAccount = process.env.FIREBASE_PRIVATE_KEY
+  ? JSON.parse(process.env.FIREBASE_PRIVATE_KEY)
+  : require('./private-key')
 
 const client = new Twitter({
   consumer_key: process.env.TWITTER_CONSUMER_KEY,
