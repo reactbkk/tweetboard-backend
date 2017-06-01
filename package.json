@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "firebase-admin": "^5.0.0",
+    "twitter": "^1.7.0"
+  },
+  "scripts": {
+    "start": "node worker.js"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}
