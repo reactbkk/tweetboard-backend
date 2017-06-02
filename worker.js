@@ -23,7 +23,7 @@ console.log('Streaming started...')
 const stream = client.stream('statuses/filter', { track: 'reactbkk' })
 stream.on('data', function (event) {
   if (event.delete && event.delete.status) {
-    ref.child(padId(event.delete.status.id_str))
+    ref.child(padId(event.delete.status.id_str)).remove()
     return
   }
   if (!event.id_str) {
