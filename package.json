@@ -4,7 +4,8 @@
     "twitter": "^1.7.0"
   },
   "scripts": {
-    "start": "node worker.js"
+    "start": "node worker.js",
+    "deploy": "hyper run --env-file=.env -d --size=s2 --restart=always dtinth/reactbkk-tweets-backend:latest"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
