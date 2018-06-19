@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const Twitter = require('twitter')
 const admin = require('firebase-admin')
 const serviceAccount = process.env.FIREBASE_PRIVATE_KEY
