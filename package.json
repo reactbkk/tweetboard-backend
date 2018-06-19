@@ -1,11 +1,12 @@
 {
   "dependencies": {
+    "dotenv": "^6.0.0",
     "firebase-admin": "^5.0.0",
     "twitter": "^1.7.0"
   },
   "scripts": {
     "start": "node worker.js",
-    "deploy": "hyper run --env-file=.env -d --size=s2 --restart=always dtinth/reactbkk-tweets-backend:latest"
+    "deploy": "hyper run --name=reactbkk-tweets --env-file=.env -d --size=s2 --restart=always dtinth/reactbkk-tweets-backend:latest"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
