@@ -22,7 +22,9 @@ const db = admin.database()
 const ref = db.ref('tweets/reactbkk')
 
 console.log('Streaming started...')
-const stream = client.stream('statuses/filter', { track: 'reactbkk' })
+const stream = client.stream('statuses/filter', {
+  track: 'reactbkk,reactbkk3,reactbnk,reactbnk3'
+})
 stream.on('data', function (event) {
   if (event.delete && event.delete.status) {
     ref.child(padId(event.delete.status.id_str)).remove()
